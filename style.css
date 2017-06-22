@@ -1,0 +1,35 @@
+body {
+  background: #FFF;
+  font-family: sans-serif;
+}
+body .row {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+}
+body .row:first-child {
+  border-top: 1px solid #DDD;
+}
+body .row:not(:last-child) {
+  border-bottom: 1px solid #DDD;
+}
+body .row:nth-child(odd) {
+  background: #EFEFEF;
+}
+
+.loading .text{
+  background:#bcbcbc;
+  min-width: 5em;
+  display: inline-block;
+  animation: placeHolderShimmer 600ms infinite ease-in-out;
+  color:transparent;
+}
+
+@keyframes placeHolderShimmer{
+  0%{
+    opacity: 1.5;
+  }
+  100% {
+    opacity: .5;
+  }
+}

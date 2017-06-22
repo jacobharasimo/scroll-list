@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Take Home #1</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    window.app = {
+      rowHeight: 30,
+      fetch(arr) {
+        return {
+          then(cb) {
+            const res = arr.map(() => faker.fake("{{name.lastName}}, {{name.firstName}}"));
+            setTimeout(() => cb(res), 1e3);
+          }
+        };
+      }
+    };
+  </script>
+  <script src="libs/faker.min.js"></script>
+  <script src="libs/lodash.min.js"></script>
+  <script src="libs/react-15.1.0.js"></script>
+  <script src="libs/react-dom-15.1.0.js"></script>
+  <script src="libs/babel-browser.js"></script>
+
+  <script type="text/babel" src="app.js"></script>
+</body>
+</html>
